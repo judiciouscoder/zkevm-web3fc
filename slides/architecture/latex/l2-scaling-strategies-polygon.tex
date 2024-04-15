@@ -1,0 +1,47 @@
+% !TeX document-id = {38ad272c-6b95-4178-b409-8ae7f3766667}
+% !TeX spellcheck = en_US
+% !TeX root = ../../build/architecture.tex
+% !TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+
+
+\renewcommand{\mytitle}{Polygon L2 Scaling Strategies}
+\ifZEROSEC \fi
+\ifSEC \section{\mytitle{}}\fi
+\ifSUBSEC \subsection{\mytitle{}}\fi
+\ifSUBSUBSEC \subsubsection{\mytitle{}}\fi
+
+
+\begin{frame}{L2 Scaling and Strategies}
+Review the road to scalability and the
+L2 scaling strategies at the concepts.
+\end{frame}
+
+
+
+
+\begin{frame}{L2 Design for the Polygon zkEVM}
+\begin{enumerate}[a)]
+\item How users send L2 transactions and who receives them?
+  \begin{itemize}
+  \item The zkEVM uses \textbf{unicast} to let user send their transaction (calls to an RPC).
+  \item The zkEVM also enables posting L2 transactions via a method in a \textbf{smart contract}
+  as an anti-censorship measure (called "forced batches").
+  \end{itemize}
+\item How L2 transactions are made publicly available (if so)?
+  \begin{itemize}
+  \item The zkEVM is a \textbf{rollup}, the L2 data is available in L1.
+  \end{itemize}
+\item Who processes the L2 transactions and how, and, when
+it is publicly considered that a new state is correctly computed?
+  \begin{itemize}
+  \item In the zkEVM, currently, there is a \textbf{centralized aggregator node} that proves the
+ processing of the L2 transactions.
+  \item However, this node cannot cheat because there is a \textbf{succinct computation verification}
+  (using zero-knowledge technology).
+  \end{itemize}
+\item What type of applications the L2 supports? simple or rich processing?
+  \begin{itemize}
+  \item zkEVM is rich processing since it is an \textbf{EVM}.
+  \end{itemize}
+\end{enumerate}
+\end{frame}

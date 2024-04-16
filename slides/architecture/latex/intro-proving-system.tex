@@ -339,7 +339,8 @@ this process can be optimized for this computation.
 \begin{figure}
 \begin{zkasm}
 STEP => A
-0                                   :ASSERT ; Ensure it is the beginning of the execution
+0                                   :ASSERT ; Ensure it is the beginning of the execution 
+                                            ; If A is not 0, the proof cannot be generated!
 
 CTX                                 :MSTORE(forkID)
 CTX - %FORK_ID                      :JMPNZ(failAssert)
@@ -636,7 +637,7 @@ resources to be validated.
 \end{frame}
 
 
-
+\ifCOMMENT
 \begin{frame}[fragile]{Example of Usage of a Private Input}
 
 A typical example of using a private input is to prove the knowledge of
@@ -878,7 +879,7 @@ op2*(1-op1)*(a+b+c+a'+b'-c') &= 0
 \end{column}
 \end{columns}
 \end{frame}
-
+\fi
 
 
 
@@ -950,7 +951,7 @@ can take several hours.
 
 
 
-
+\ifCOMMENT
 \begin{frame}{Motivational Example: Implementing an EXP Operation}
 \begin{itemize}
 \small
@@ -1125,7 +1126,7 @@ correctness of the \texttt{EXP} operation.
 that we call \textit{"free"}, in a single row.
 \end{itemize}
 \end{frame}
-
+\fi
 
 
 

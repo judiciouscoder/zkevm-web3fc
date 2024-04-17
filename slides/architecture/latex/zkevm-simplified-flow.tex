@@ -61,19 +61,19 @@ consolidated and stores this information in the node's \textbf{StateDB}.
 
 
 
-\begin{frame}[fragile]{Remark About Building the Software}
-\begin{itemize}
-\item Each component in a box can be instantiated in an isolated executable.
-\item The State library is imported by components (is not instantiated).
-\item While the JSON RPC is devoted to external communication, 
-the component internal communication takes place using two types of interfaces:
-  \begin{itemize}
-  \item gRPC APIs.
-  \item Postgre APIs with the databases.
-  \end{itemize}
-\item However, many components are built together into a single executable that can 
-be configured as desired when started.
-\item Finally, remark that the databases can be built as databases in a single Postgre server or
-they can be split as desired in multiple PostgreSQL servers.
-\end{itemize}
-\end{frame}
+% \begin{frame}[fragile]{Remark About Building the Software}
+% \begin{itemize}
+% \item Each component in a box can be instantiated in an isolated executable.
+% \item The State library is imported by components (is not instantiated).
+% \item While the JSON RPC is devoted to external communication, 
+% the component internal communication takes place using two types of interfaces:
+%   \begin{itemize}
+%   \item gRPC APIs.
+%   \item Postgre APIs with the databases.
+%   \end{itemize}
+% \item However, many components are built together into a single executable that can 
+% be configured as desired when started.
+% \item Finally, remark that the databases can be built as databases in a single Postgre server or
+% they can be split as desired in multiple PostgreSQL servers.
+% \end{itemize}
+% \end{frame}

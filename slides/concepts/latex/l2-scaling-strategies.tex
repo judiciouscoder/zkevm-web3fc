@@ -281,37 +281,37 @@ Scalability solutions for blockchains can be classified by two main dimensions:
 
 
 
-\begin{frame}[allowframebreaks]{Remarks about zkValidiums}
-\begin{columns}
-\begin{column}{0.35 \textwidth}
-\begin{itemize}
-\small
-\item In \textbf{zkValidium}, instead of posting all the batch data back to L1, only a cryptographic summary (a \textit{hash}) of it is posted.
-\item This means that a user cannot retrieve the L2 transactions from L1. 
-\item Instead, the user must ask a \textit{reliable} L2 operator (data manager) for these data.
-\end{itemize}
-\end{column}
-\begin{column}{0.65 \textwidth}
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{\zkevmdir/figures/concepts/l2-scaling-strategies/validium.drawio}
-\end{figure}
-\end{column}
-\end{columns}
+% \begin{frame}[allowframebreaks]{Remarks about zkValidiums}
+% \begin{columns}
+% \begin{column}{0.35 \textwidth}
+% \begin{itemize}
+% \small
+% \item In \textbf{zkValidium}, instead of posting all the batch data back to L1, only a cryptographic summary (a \textit{hash}) of it is posted.
+% \item This means that a user cannot retrieve the L2 transactions from L1. 
+% \item Instead, the user must ask a \textit{reliable} L2 operator (data manager) for these data.
+% \end{itemize}
+% \end{column}
+% \begin{column}{0.65 \textwidth}
+% \begin{figure}
+% \centering
+% \includegraphics[width=\columnwidth]{\zkevmdir/figures/concepts/l2-scaling-strategies/validium.drawio}
+% \end{figure}
+% \end{column}
+% \end{columns}
 
-\framebreak
-In case the operators do not provide the data to the user, still the ZK processing assures that the transactions included in the batch
-are always correctly processed.
+% \framebreak
+% In case the operators do not provide the data to the user, still the ZK processing assures that the transactions included in the batch
+% are always correctly processed.
 
-\vspace{0.2cm}
-This means that, for example: 
+% \vspace{0.2cm}
+% This means that, for example: 
 
-\vspace{0.1cm}
-  \begin{itemize}
-  \item No one can steal your funds. 
-  \item You might see an increase in your L2 balance, but you might not know which concrete L2 transaction produced this increase.
-  \end{itemize}
-\end{frame}
+% \vspace{0.1cm}
+%   \begin{itemize}
+%   \item No one can steal your funds. 
+%   \item You might see an increase in your L2 balance, but you might not know which concrete L2 transaction produced this increase.
+%   \end{itemize}
+% \end{frame}
 
 
 
@@ -381,7 +381,7 @@ In fact, the majority of the cost comes from the data availability, but we can w
 Addressing data availability costs:
   \begin{itemize}
   \item Succinct verification of \textbf{compressed} data (for example, transaction digital signature).
-  \item EIP 4884 \textbf{Proto-Danksharing}:
+  \item EIP 4844 \textbf{Proto-Danksharing}:
     \begin{itemize}
     \item Data shards are much cheaper than writing in L1 execution layer.
     \item Remark that the L1 execution layer (smart contracts) will have access to blobs in data shards.

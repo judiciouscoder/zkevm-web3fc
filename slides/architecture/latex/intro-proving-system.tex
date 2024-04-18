@@ -885,28 +885,9 @@ op2*(1-op1)*(a+b+c+a'+b'-c') &= 0
 
 
 \begin{frame}{The Execution Trace and the zkEVM}
-\begin{itemize}
-\small
-\item In our current cryptographic backend, we have a shape that is pre-fixed for the execution trace.
-\item Also, we don't know exactly what EVM opcodes (and as a consequence zkEVM operations) will be executed, 
-since this depends on the particular transactions of the L2 batch.
-\item The pre-fixed shape fixes in turn the amount of computation that we can do, which
-in our case is the amount and type of L2 transactions for which we can generate a proof.
-\item  In general, it is hard to optimize the shape of a single execution trace matrix:
-\end{itemize}
-\begin{columns}
-\begin{column}{0.36\textwidth}
-\begin{enumerate}
-\footnotesize
-\item \textbf{Narrow matrices may easily hit the max row limit}, which is about $2^{23}$
-(fixed by the cryptographic back-end).
-\item \textbf{Wide matrices might be inefficient} for mixing many different instructions.
-\end{enumerate}
-\end{column}
-\begin{column}{0.55\textwidth}
-\includegraphics[width=\columnwidth]{\zkevmdir/figures/architecture/intro-proving-system/batch-evmopcode-zkop-trace.drawio}
-\end{column}
-\end{columns}
+\begin{figure}
+\includegraphics[width=0.75\columnwidth]{\zkevmdir/figures/architecture/intro-proving-system/batch-evmopcode-zkop-trace.drawio}
+\end{figure}
 \end{frame}
 
 
@@ -1274,22 +1255,6 @@ in the execution trace matrices available}.
 
 \end{column}
 \end{columns}
-\end{frame}
-
-
-
-%TODO WIP
-\begin{frame}{PIL Evolution: PIL2 (WIP)}
-\begin{itemize}
-\item Currently, we are under the development of a new version of PIL called \textbf{PIL2}.
-
-\vspace{0.2cm}
-\item PIL2 is designed to operate with a more powerful cryptographic backend that is able to 
-generate as many subexecution traces as required by the batch processing so that we never run out of rows.
-
-\vspace{0.2cm}
-\item We are also agreeing with the rest of the "zk projects" at Polygon a format for the PIL output file called "pilout".
-\end{itemize}
 \end{frame}
 
 
